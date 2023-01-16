@@ -14,7 +14,7 @@ local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 
 local BaseObject = require("BaseObject")
-local CameraStackService = require("CameraStackServiceClient")
+local CameraStackService = require("CameraStackService")
 local CharacterUtils = require("CharacterUtils")
 local HapticFeedbackUtils = require("HapticFeedbackUtils")
 local RagdollServiceClient = require("RagdollServiceClient")
