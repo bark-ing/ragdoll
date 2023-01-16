@@ -1,0 +1,56 @@
+{
+  "name": "@quenty/ragdoll",
+  "version": "9.10.0",
+  "description": "Quenty's Ragdoll system for Roblox - Floppy fun ragdolls",
+  "keywords": [
+    "Roblox",
+    "Nevermore",
+    "Lua",
+    "ragdoll"
+  ],
+  "bugs": {
+    "url": "https://github.com/Quenty/NevermoreEngine/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Quenty/NevermoreEngine.git",
+    "directory": "src/ragdoll/"
+  },
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/quenty"
+  },
+  "license": "MIT",
+  "contributors": [
+    "Quenty"
+  ],
+  "dependencies": {
+    "@quenty/attributeutils": "file:../attributeutils",
+    "@quenty/baseobject": "file:../baseobject",
+    "@quenty/binder": "file:../binder",
+    "@quenty/brio": "file:../brio",
+    "@quenty/camera": "file:../camera",
+    "@quenty/cancellabledelay": "file:../cancellabledelay",
+    "@quenty/characterutils": "file:../characterutils",
+    "@quenty/draw": "file:../draw",
+    "@quenty/enumutils": "file:../enumutils",
+    "@quenty/hapticfeedbackutils": "file:../hapticfeedbackutils",
+    "@quenty/instanceutils": "file:../instanceutils",
+    "@quenty/loader": "file:../loader",
+    "@quenty/maid": "file:../maid",
+    "@quenty/motor6d": "file:../motor6d",
+    "@quenty/playerhumanoidbinder": "file:../playerhumanoidbinder",
+    "@quenty/promise": "file:../promise",
+    "@quenty/qframe": "file:../qframe",
+    "@quenty/r15utils": "file:../r15utils",
+    "@quenty/remoting": "file:../remoting",
+    "@quenty/rx": "file:../rx",
+    "@quenty/spring": "file:../spring",
+    "@quenty/steputils": "file:../steputils",
+    "@quenty/table": "file:../table",
+    "@quenty/valuebaseutils": "file:../valuebaseutils"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
