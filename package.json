@@ -30,7 +30,7 @@
     "@quenty/baseobject": "file:../baseobject",
     "@quenty/binder": "file:../binder",
     "@quenty/brio": "file:../brio",
-    "@quenty/camera": "file:../camera",
+    "@bark_ing/camera": "^9.6.0",
     "@quenty/cancellabledelay": "file:../cancellabledelay",
     "@quenty/characterutils": "file:../characterutils",
     "@quenty/draw": "file:../draw",
