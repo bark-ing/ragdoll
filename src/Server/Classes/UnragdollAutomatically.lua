@@ -58,7 +58,7 @@ function UnragdollAutomatically:_handleRagdollChanged(maid)
 		}):Subscribe(function(canUnragdoll)
 			if canUnragdoll then
 				self._obj:SetAttribute("Ragdoll", false)
-				-- self._ragdollBindersServer.Ragdoll:Unbind(self._obj)
+				self._ragdollBindersServer.Ragdoll:Unbind(self._obj)
 			end
 		end)
 	else
