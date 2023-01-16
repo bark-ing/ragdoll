@@ -1,5 +1,5 @@
 {
-  "name": "@quenty/ragdoll",
+  "name": "@bark_ing/ragdoll",
   "version": "9.10.0",
   "description": "Quenty's Ragdoll system for Roblox - Floppy fun ragdolls",
   "keywords": [
@@ -9,11 +9,11 @@
     "ragdoll"
   ],
   "bugs": {
-    "url": "https://github.com/Quenty/NevermoreEngine/issues"
+    "url": "https://github.com/bark-ing/ragdoll/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Quenty/NevermoreEngine.git",
+    "url": "git+https://github.com/bark-ing/ragdoll.git",
     "directory": "src/ragdoll/"
   },
   "funding": {
@@ -22,7 +22,8 @@
   },
   "license": "MIT",
   "contributors": [
-    "Quenty"
+    "Quenty",
+    "Bark_ing"
   ],
   "dependencies": {
     "@quenty/attributeutils": "file:../attributeutils",
