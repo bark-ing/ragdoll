@@ -27,6 +27,8 @@ function RagdollHumanoidOnAttribute.new(humanoid, serviceBag)
 	self._maid:GiveTask(self._obj:GetAttributeChangedSignal("Ragdoll"):Connect(function()
 		if self._obj:GetAttribute("Ragdoll") then
 			self._ragdollBinder:Bind(self._obj)
+		else
+			self._ragdollBinder:Unbind(self._obj)
 		end
 	end))
 
