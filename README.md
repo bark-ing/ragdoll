@@ -17,5 +17,5 @@ Provides a ragdoll system for Roblox with network interopability, ensuring no fl
 
 ## Installation
 ```
-npm install @quenty/ragdoll --save
+npm install @bark_ing/ragdoll --save
 ```
