@@ -14,7 +14,7 @@ local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 
 local BaseObject = require("BaseObject")
-local CameraStackService = require("CameraStackService")
+-- local CameraStackService = require("CameraStackService")
 local CharacterUtils = require("CharacterUtils")
 local HapticFeedbackUtils = require("HapticFeedbackUtils")
 local RagdollServiceClient = require("RagdollServiceClient")
@@ -40,7 +40,7 @@ function RagdollClient.new(humanoid, serviceBag)
 			RagdollMotorUtils.yieldUntilStepped()
 
 			self:_setupHapticFeedback()
-			self:_setupCameraShake(CameraStackService:GetImpulseCamera())
+-- 			self:_setupCameraShake(CameraStackService:GetImpulseCamera())
 		end))
 	end
 
@@ -48,29 +48,29 @@ function RagdollClient.new(humanoid, serviceBag)
 end
 
 -- TODO: Move out of this open source module
-function RagdollClient:_setupCameraShake(impulseCamera)
-	local head = self._obj.Parent:FindFirstChild("Head")
-	if not head then
-		return
-	end
+-- function RagdollClient:_setupCameraShake(impulseCamera)
+-- 	local head = self._obj.Parent:FindFirstChild("Head")
+-- 	if not head then
+-- 		return
+-- 	end
 
-	local lastVelocity = head.Velocity
-	self._maid:GiveTask(RunService.Heartbeat:Connect(function()
-		debug.profilebegin("ragdollcamerashake")
-		local cameraCFrame = Workspace.CurrentCamera.CFrame
+-- 	local lastVelocity = head.Velocity
+-- 	self._maid:GiveTask(RunService.Heartbeat:Connect(function()
+-- 		debug.profilebegin("ragdollcamerashake")
+-- 		local cameraCFrame = Workspace.CurrentCamera.CFrame
 
-		local velocity = head.Velocity
-		local dVelocity = velocity - lastVelocity
-		if dVelocity.magnitude >= 0 then
-			if RagdollServiceClient:GetScreenShakeEnabled() then
-				impulseCamera:Impulse(cameraCFrame:VectorToObjectSpace(-0.1*cameraCFrame.LookVector:Cross(dVelocity)))
-			end
-		end
+-- 		local velocity = head.Velocity
+-- 		local dVelocity = velocity - lastVelocity
+-- 		if dVelocity.magnitude >= 0 then
+-- 			if RagdollServiceClient:GetScreenShakeEnabled() then
+-- 				impulseCamera:Impulse(cameraCFrame:VectorToObjectSpace(-0.1*cameraCFrame.LookVector:Cross(dVelocity)))
+-- 			end
+-- 		end
 
-		lastVelocity = velocity
-		debug.profileend()
-	end))
-end
+-- 		lastVelocity = velocity
+-- 		debug.profileend()
+-- 	end))
+-- end
 
 function RagdollClient:_setupHapticFeedback()
 	local lastInputType = UserInputService:GetLastInputType()
