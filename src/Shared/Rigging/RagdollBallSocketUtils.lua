@@ -112,7 +112,7 @@ local R6_RAGDOLL_RIG = {
 	{
 		part0Name = "Torso";
 		part1Name ="Head",
-		attachmentName = "NeckAttachment";
+		attachmentName = "NeckRagdollAttachment";
 		motorParentName = "Torso";
 		motorName = "Neck";
 		limits = R6_HEAD_LIMITS;
@@ -120,7 +120,7 @@ local R6_RAGDOLL_RIG = {
 	{
 		part0Name = "Torso";
 		part1Name ="Left Leg";
-		attachmentName = "LeftHipAttachment";
+		attachmentName = "LeftHipRagdollAttachment";
 		motorParentName = "Torso";
 		motorName = "Left Hip";
 		limits = R6_HIP_LIMITS;
@@ -128,7 +128,7 @@ local R6_RAGDOLL_RIG = {
 	{
 		part0Name = "Torso";
 		part1Name ="Right Leg";
-		attachmentName = "RightHipAttachment";
+		attachmentName = "RightHipRagdollAttachment";
 		motorParentName = "Torso";
 		motorName = "Right Hip";
 		limits = R6_HIP_LIMITS;

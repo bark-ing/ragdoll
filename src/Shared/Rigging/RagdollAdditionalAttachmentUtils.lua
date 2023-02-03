@@ -30,8 +30,8 @@ local R15_ADDITIONAL_ATTACHMENTS = {
 }
 
 local R6_ADDITIONAL_ATTACHMENTS = {
-	{"Head", "NeckAttachment", CFrame.new(0, -0.5, 0)},
-	{"Torso", "NeckAttachment", CFrame.new(0, 1, 0)},
+	{"Head", "NeckRagdollAttachment", CFrame.new(0, -0.5, 0)},
+	{"Torso", "NeckRagdollAttachment", CFrame.new(0, 1, 0)},
 
 	{"Torso", "RightShoulderRagdollAttachment", CFrame.fromMatrix(Vector3.new(1, 0.5, 0), V3_RIGHT, V3_UP)},
 	{"Right Arm", "RightShoulderRagdollAttachment", CFrame.fromMatrix(Vector3.new(-0.5, 0.5, 0), V3_DOWN, V3_RIGHT)},
@@ -39,11 +39,11 @@ local R6_ADDITIONAL_ATTACHMENTS = {
 	{"Torso", "LeftShoulderRagdollAttachment", CFrame.fromMatrix(Vector3.new(-1, 0.5, 0), V3_LEFT, V3_UP)},
 	{"Left Arm", "LeftShoulderRagdollAttachment", CFrame.fromMatrix(Vector3.new(0.5, 0.5, 0), V3_DOWN, V3_LEFT)},
 
-	{"Torso", "RightHipAttachment", CFrame.new(0.5, -1, 0)},
-	{"Right Leg", "RightHipAttachment", CFrame.new(0, 1, 0)},
+	{"Torso", "RightHipRagdollAttachment", CFrame.new(0.5, -1, 0)},
+	{"Right Leg", "RightHipRagdollAttachment", CFrame.new(0, 1, 0)},
 
-	{"Torso", "LeftHipAttachment", CFrame.new(-0.5, -1, 0)},
-	{"Left Leg", "LeftHipAttachment", CFrame.new(0, 1, 0)},
+	{"Torso", "LeftHipRagdollAttachment", CFrame.new(-0.5, -1, 0)},
+	{"Left Leg", "LeftHipRagdollAttachment", CFrame.new(0, 1, 0)},
 }
 
 function RagdollAdditionalAttachmentUtils.getAdditionalAttachmentData(rigType)
