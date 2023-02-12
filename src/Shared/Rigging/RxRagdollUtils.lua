@@ -1,6 +1,5 @@
 --[=[
 	Utility methods to assist with rigging the ragdoll in real-time.
-
 	@class RxRagdollUtils
 ]=]
 
@@ -103,38 +102,25 @@ function RxRagdollUtils.runLocal(humanoid)
 			-- since the server will replicate all changes over to the client.
 			if RunService:IsServer() or player == Players.LocalPlayer then
 				maid:GivePromise(RagdollMotorUtils.promiseVelocityRecordings(character, rigType))
-				:Then(function(velocityReadings)
-					debug.profilebegin("initragdoll")
+					:Then(function(velocityReadings)
+						debug.profilebegin("initragdoll")
 
-					maid:GiveTask(RxRagdollUtils.suppressRootPartCollision(character))
-					maid:GiveTask(RxRagdollUtils.enforceHeadCollision(character))
+						maid:GiveTask(RxRagdollUtils.suppressRootPartCollision(character))
+						maid:GiveTask(RxRagdollUtils.enforceHeadCollision(character))
 
-					-- Do motors
-					maid:GiveTask(RagdollMotorUtils.suppressMotors(character, rigType, velocityReadings))
-				
-					-- Disable backpack and tools
-					if RunService:IsClient() then
-						-- Disable equiping tools 
-						maid:GiveTask(character.ChildAdded:Connect(function(inst)
-							if inst:IsA("Tool") and character:FindFirstChild("Humanoid") then
-								character.Humanoid:UnequipTools()
-							end
-						end))
-					end
+						-- Do motors
+						maid:GiveTask(RagdollMotorUtils.suppressMotors(character, rigType, velocityReadings))
 
-					humanoid:ChangeState(Enum.HumanoidStateType.Physics)
-					maid:GiveTask(function()
-						if RunService:IsClient() then
-							
-						end
-						humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+						humanoid:ChangeState(Enum.HumanoidStateType.Physics)
+						maid:GiveTask(function()
+							humanoid:ChangeState(Enum.HumanoidStateType.GettingUp)
+						end)
+
+						debug.profileend()
 					end)
-
-					debug.profileend()
-				end)
-				-- :Catch(function(e)
-				-- 	print(e)
-				-- end)
+					-- :Catch(function(e)
+					-- 	print(e)
+					-- end)
 			else
 				debug.profilebegin("initragdoll_nonowner")
 
